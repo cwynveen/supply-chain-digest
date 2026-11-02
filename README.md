@@ -25,7 +25,7 @@ Stop it with `docker rm -f scd`.
 ## Endpoints
 
 | Path | |
-|---|---|
+| --- | --- |
 | `GET /` | The digest as a web page |
 | `GET /api/digest` | The same data as JSON |
 | `POST /refresh` | Rebuild now |
@@ -34,7 +34,7 @@ Stop it with `docker rm -f scd`.
 ## Configuration
 
 | Variable | Default | Meaning |
-|---|---|---|
+| --- | --- | --- |
 | `DIGEST_TIME` | `07:00` | Daily rebuild time (24h) |
 | `DIGEST_ZONE` | container zone (UTC) | Time zone for `DIGEST_TIME` and page timestamps, e.g. `America/New_York` |
 | `LOOKBACK_HOURS` | `72` | How far back to look. 72h covers weekends for a Monday digest. |
