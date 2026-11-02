@@ -1,0 +1,13 @@
+image:
+  repository: supply-chain-digest
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+env:
+  DIGEST_ZONE: America/Chicago
+
+service:
+  type: ClusterIP
+  port: 80

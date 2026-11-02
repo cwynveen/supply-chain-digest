@@ -1,0 +1,6 @@
+apiVersion: v2
+name: supply-chain-digest
+description: Daily digest of software supply chain attacks.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

@@ -1,0 +1,6 @@
+out/
+app.jar
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
