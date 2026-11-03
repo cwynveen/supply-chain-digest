@@ -12,9 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: chainguard-actions/actions-checkout@37298d8de412b35988dd165ffae45f45b329d365 # v7.0.1
 
-      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+      - uses: chainguard-actions/actions-setup-java@4abbff4c3bfc93084ea2ff1796c8b4e0c255e47d # v6.1.0
         with:
           distribution: temurin
           java-version: '21'
@@ -24,7 +24,7 @@ jobs:
           javac --release 21 -d out $(find src -name '*.java')
           jar --create --file app.jar --main-class digest.App -C out .
 
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      - uses: chainguard-actions/actions-upload-artifact@c91615377dcc230c6b156542d25044f9b8d80dd8 # v7.0.2
         with:
           name: app-jar
           path: app.jar
@@ -32,7 +32,7 @@ jobs:
   image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: chainguard-actions/actions-checkout@37298d8de412b35988dd165ffae45f45b329d365 # v7.0.1
 
       - name: Build image
         env:
